@@ -16,11 +16,21 @@
             </arguments>
         </referenceBlock>
 
+        <!-- cleaning unneeded blocks -->
         <referenceBlock name="minicart" remove="true" />
         <referenceBlock name="header.panel.wrapper" remove="true" />
         <referenceBlock name="top.links" remove="true" />
         <referenceBlock name="report.bugs" remove="true" />
         <referenceBlock name="form.subscribe" remove="true" />
+
+        <referenceContainer name="footer-container">
+            <referenceBlock name="footer_links" remove="true" />
+            <referenceBlock name="store_switcher" remove="true" />
+
+            <container name="footer-copyright" as="copyright" label="Footer Copyright" htmlTag="div" htmlClass="footer copyright">
+                <block class="Magento\Theme\Block\Html\Footer" name="copyright" template="Magento_Theme::html/copyright.phtml"/>
+            </container>
+        </referenceContainer>
 
     </body>
 </page>
