@@ -27,10 +27,16 @@
             <referenceBlock name="footer_links" remove="true" />
             <referenceBlock name="store_switcher" remove="true" />
 
-            <container name="footer-copyright" as="copyright" label="Footer Copyright" htmlTag="div" htmlClass="footer copyright">
-                <block class="Magento\Theme\Block\Html\Footer" name="copyright" template="Magento_Theme::html/copyright.phtml"/>
-            </container>
-        </referenceContainer>
+            <referenceContainer name="footer">
+                <!-- Creating footer widgets -->
+                <container name="footer-widgets" as="widgets" label="Footer Widgets" htmlTag="div" before="copyright" htmlClass="footer widgets">
 
+                </container>
+
+                <container name="footer-copyright" as="copyright" label="Footer Copyright" htmlTag="div" htmlClass="footer copyright">
+                    <block class="Magento\Theme\Block\Html\Footer" name="copyright" template="Magento_Theme::html/copyright.phtml"/>
+                </container>
+            </referenceContainer>
+        </referenceContainer>
     </body>
 </page>
