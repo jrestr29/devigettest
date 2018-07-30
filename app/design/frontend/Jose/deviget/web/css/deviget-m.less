@@ -1,5 +1,65 @@
+@import 'source/_colors.less'; //Template colors definitions
+@import 'source/_generic.less'; //Various mixins
+@import 'source/_responsive.less';
 
+header {
+  background-color: @header-bg-color;
+  color: @header-font-color;
+
+  .header-nav-styles();
+}
 
 body {
   background-color: #fff;
+}
+
+footer {
+  .footer {
+    &.content {
+      margin-top: 0;
+      padding: 0;
+    }
+
+    &.widgets {
+      padding: 10px 15px 10px 15px;
+    }
+
+    span {
+      color: @footer-text-color;
+    }
+
+    &.widgets {
+      background-color: @footer-widgets-bg-color;
+
+      .widget {
+        border-bottom: 1px solid @footer-widget-mobile-border;
+        display:block;
+
+        .textselector-color(@footer-text-color);
+
+        p {
+          font-size: 1.5rem;
+        }
+
+        h1 {
+          color: @footer-titles-color;
+          font-size: 2.4rem;
+        }
+
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
+    }
+
+    &.copyright {
+      margin: 0;
+      background-color: @footer-bg-color;
+      padding: 20px 15px 20px 15px;
+
+      small {
+        margin: 0;
+      }
+    }
+  }
 }

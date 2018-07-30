@@ -1,0 +1,19 @@
+.header-nav-styles() {
+  span, a, a:active, a:link, a:visited, a:hover {
+    color: @header-font-color
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  &::before, &::after {
+    color: @header-font-color;
+  }
+}
+
+.textselector-color(@color) {
+  p, span, a, small, strong {
+    color: @color !important;
+  }
+}
