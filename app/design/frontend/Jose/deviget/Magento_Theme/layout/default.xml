@@ -1,3 +1,10 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="logo">
@@ -9,7 +16,49 @@
             </arguments>
         </referenceBlock>
 
+        <!-- cleaning unneeded blocks -->
+        <referenceBlock name="minicart" remove="true" />
+        <referenceBlock name="header.panel.wrapper" remove="true" />
         <referenceBlock name="top.links" remove="true" />
         <referenceBlock name="report.bugs" remove="true" />
+        <referenceBlock name="form.subscribe" remove="true" />
+
+        <referenceContainer name="footer-container">
+            <referenceBlock name="footer_links" remove="true" />
+            <referenceBlock name="store_switcher" remove="true" />
+
+            <referenceContainer name="footer">
+                <!-- Creating footer widgets -->
+                <container name="footer-widgets" as="widgets" label="Footer Widgets" htmlTag="div" before="copyright" htmlClass="footer widgets">
+                    <container name="widget1" htmlTag="div" htmlClass="widget">
+                        <block class="Magento\Cms\Block\Widget\Block" name="text-widget-1" template="Magento_Cms::html/widget/customWidget.phtml">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">2</argument>
+                            </arguments>
+                        </block>
+                    </container>
+
+                    <container name="widget2" htmlTag="div" htmlClass="widget">
+                        <block class="Magento\Cms\Block\Widget\Block" name="text-widget-2" template="Magento_Cms::html/widget/customWidget.phtml">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">2</argument>
+                            </arguments>
+                        </block>
+                    </container>
+
+                    <container name="widget3" htmlTag="div" htmlClass="widget">
+                        <block class="Magento\Cms\Block\Widget\Block" name="text-widget-3" template="Magento_Cms::html/widget/customWidget.phtml">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">2</argument>
+                            </arguments>
+                        </block>
+                    </container>
+                </container>
+
+                <container name="footer-copyright" as="copyright" label="Footer Copyright" htmlTag="div" htmlClass="footer copyright">
+                    <block class="Magento\Theme\Block\Html\Footer" name="copyright" template="Magento_Theme::html/copyright.phtml"/>
+                </container>
+            </referenceContainer>
+        </referenceContainer>
     </body>
 </page>
