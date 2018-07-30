@@ -32,9 +32,22 @@ footer {
       background-color: @footer-widgets-bg-color;
 
       .widget {
+        border-bottom: 1px solid @footer-widget-mobile-border;
+        display:block;
+
         .textselector-color(@footer-text-color);
-        strong {
+
+        p {
+          font-size: 1.5rem;
+        }
+
+        h1 {
           color: @footer-titles-color;
+          font-size: 2.4rem;
+        }
+
+        &:last-of-type {
+          border-bottom: none;
         }
       }
     }
