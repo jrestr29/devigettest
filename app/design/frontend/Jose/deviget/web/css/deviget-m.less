@@ -13,6 +13,30 @@ header {
 body {
   background-color: #fff;
 
+  .nav-toggle {
+    top: 0;
+    &::before {
+      color: @header-font-color;
+    }
+  }
+
+  .field {
+    &.search {
+      label {
+        &::before {
+          color: @header-font-color;
+        }
+      }
+    }
+  }
+
+  .nav-sections {
+    .nav-sections-item-title {
+      display: none;
+    }
+  }
+
+
   /*** Personal information widget CSS ***/
   #social-personal-info {
     display: block;
@@ -110,7 +134,7 @@ body {
    }
 
   .sidebar {
-    //display: none;
+    margin-bottom: 3rem;
   }
 }
 

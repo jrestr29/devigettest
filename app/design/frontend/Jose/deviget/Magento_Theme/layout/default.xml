@@ -24,6 +24,7 @@
         <referenceBlock name="form.subscribe" remove="true" />
 
         <referenceContainer name="sidebar.additional">
+            <referenceBlock name="wishlist_sidebar" remove="true" />
             <container name="sidebar-widgets" htmlTag="div" htmlClass="sidebar_widgets">
                 <block class="Jose\Deviget\Block\Widget\Social\Block" />
                 <block class="Jose\Deviget\Block\Widget\Social\PersonalInfo">
