@@ -24,4 +24,8 @@
             </parameter>
         </parameters>
     </widget>
+    <widget class="Jose\Deviget\Block\Widget\Social\Block" id="jose_deviget_social_networks">
+        <label>Deviget social widget</label>
+        <description>Social Networks</description>
+    </widget>
 </widgets>
