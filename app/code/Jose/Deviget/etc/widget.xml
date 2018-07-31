@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:deviget:Magento_Widget:etc/widget.xsd">
+    <widget class="Jose\Deviget\Block\Widget\Social\PersonalInfo" id="jose_deviget_personal_info">
+        <label>Deviget Personal Information widget</label>
+        <description>Author personal information</description>
+        <parameters>
+            <parameter name="template_author" xsi:type="text" visible="true" sort_order="1">
+                <label translate="true">Author Name</label>
+                <description translate="true">Theme author to be shown</description>
+            </parameter>
+            <parameter name="text" xsi:type="block" required="true" visible="true" sort_order="2">
+                <label translate="true">Author Resume</label>
+                <block class="Jose\Deviget\Block\Widget\Social\Adminhtml\TextField"/>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
