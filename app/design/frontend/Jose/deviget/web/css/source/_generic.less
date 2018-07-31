@@ -17,3 +17,10 @@
     color: @color !important;
   }
 }
+
+.image-sprite(@bg-image, @positionX, @positionY) {
+  img {
+    width: 100%;
+    background: url(@bg-image) @positionX @positionY;
+  }
+}
