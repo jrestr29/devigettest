@@ -1,6 +1,7 @@
 @import 'source/_colors.less'; //Template colors definitions
 @import 'source/_generic.less'; //Various mixins
 @import 'source/_responsive.less';
+@baseDir: "../"; // Base directory path
 
 header {
   background-color: @header-bg-color;
@@ -11,6 +12,55 @@ header {
 
 body {
   background-color: #fff;
+
+  /*** Social networks widget CSS ***/
+  #social-networks-widget {
+    width: 260px;
+    display: block;
+    margin: 0 auto;
+
+    h1 {
+      font-weight: bold;
+      font-size: 2.2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    #social-icons {
+      display: block;
+      width: 242px;
+
+      .icon {
+        width: 42px;
+        height: 42px;
+        display: inline-block;
+        margin-right: 4px;
+
+        &.icon-twitter{
+          .image-sprite('@{baseDir}images/social.jpg', 0, 0);
+        }
+
+        &.icon-facebook{
+          .image-sprite('@{baseDir}images/social.jpg', -50px, 0);
+        }
+
+        &.icon-pinterest{
+          .image-sprite('@{baseDir}images/social.jpg', -100px, 0);
+        }
+
+        &.icon-googleplus{
+          .image-sprite('@{baseDir}images/social.jpg', 92px, 0);
+        }
+
+        &.icon-rss{
+          .image-sprite('@{baseDir}images/social.jpg', 45px, 0);
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+   }
 }
 
 footer {

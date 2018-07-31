@@ -8,5 +8,4 @@ use Magento\Widget\Block\BlockInterface;
 class Block extends Template implements BlockInterface
 {
     protected $_template = "widget/social.phtml";
-
 }
