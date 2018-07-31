@@ -8,9 +8,19 @@
                 <label translate="true">Author Name</label>
                 <description translate="true">Theme author to be shown</description>
             </parameter>
-            <parameter name="text" xsi:type="block" required="true" visible="true" sort_order="2">
+            <parameter name="author_text" xsi:type="block" required="true" visible="true" sort_order="2">
                 <label translate="true">Author Resume</label>
                 <block class="Jose\Deviget\Block\Widget\Social\Adminhtml\TextField"/>
+            </parameter>
+            <parameter name="author_photo" xsi:type="block" required="true" visible="true" sort_order="3">
+                <label translate="true">Author Photo</label>
+                <block class="Jose\Deviget\Block\Widget\Social\Adminhtml\PhotoUpload">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Upload image</item>
+                        </item>
+                    </data>
+                </block>
             </parameter>
         </parameters>
     </widget>
