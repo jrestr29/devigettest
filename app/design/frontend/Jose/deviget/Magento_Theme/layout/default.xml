@@ -23,6 +23,18 @@
         <referenceBlock name="report.bugs" remove="true" />
         <referenceBlock name="form.subscribe" remove="true" />
 
+        <referenceContainer name="sidebar.additional">
+            <container name="sidebar-widgets" htmlTag="div" htmlClass="sidebar_widgets">
+                <block class="Jose\Deviget\Block\Widget\Social\Block" />
+                <block class="Jose\Deviget\Block\Widget\Social\PersonalInfo">
+                    <arguments>
+                        <argument name="author_name" xsi:type="string">Syed Balkhi</argument>
+                        <argument name="author_text" xsi:type="string">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel luctus risus. Duis quis felis lacus. Phasellus interdum eu augue sed iaculis. In vehicula vitae diam vel lobortis. Nullam semper mauris sit amet sapien rhoncus pretium id sit amet sapien.</argument>
+                        </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+
         <referenceContainer name="footer-container">
             <referenceBlock name="footer_links" remove="true" />
             <referenceBlock name="store_switcher" remove="true" />
