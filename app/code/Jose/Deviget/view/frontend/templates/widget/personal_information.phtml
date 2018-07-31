@@ -5,3 +5,17 @@
  */
 /* @var $block \Jose\Deviget\Block\Widget\Social\PersonalInfo */
 ?>
+<section id="social-personal-info">
+    <section id="avatar">
+        <div class="placeholder-text">
+            <span><?= __('profile_photo') ?></span>
+        </div>
+    </section>
+
+    <section id="info">
+        <h1><?= $this->getAuthorName() ?></h1>
+        <p><?= $this->getAuthorText() ?></p>
+        <a href="#">Read More</a>
+    </section>
+
+</section>

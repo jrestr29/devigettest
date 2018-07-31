@@ -4,7 +4,7 @@
         <label>Deviget Personal Information widget</label>
         <description>Author personal information</description>
         <parameters>
-            <parameter name="template_author" xsi:type="text" visible="true" sort_order="1">
+            <parameter name="author_name" xsi:type="text" required="true" visible="true" sort_order="1">
                 <label translate="true">Author Name</label>
                 <description translate="true">Theme author to be shown</description>
             </parameter>
@@ -12,7 +12,7 @@
                 <label translate="true">Author Resume</label>
                 <block class="Jose\Deviget\Block\Widget\Social\Adminhtml\TextField"/>
             </parameter>
-            <parameter name="author_photo" xsi:type="block" required="true" visible="true" sort_order="3">
+            <parameter name="author_photo" xsi:type="block" required="false" visible="true" sort_order="3">
                 <label translate="true">Author Photo</label>
                 <block class="Jose\Deviget\Block\Widget\Social\Adminhtml\PhotoUpload">
                     <data>

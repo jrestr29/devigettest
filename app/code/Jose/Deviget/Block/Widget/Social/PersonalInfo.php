@@ -6,5 +6,5 @@ use Magento\Widget\Block\BlockInterface;
 
 class PersonalInfo extends Template implements BlockInterface
 {
-    protected $_template = "widget/personal_info.phtml";
+    protected $_template = "widget/personal_information.phtml";
 }
