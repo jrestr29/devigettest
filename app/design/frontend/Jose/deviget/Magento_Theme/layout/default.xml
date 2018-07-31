@@ -31,7 +31,7 @@
                 <!-- Creating footer widgets -->
                 <container name="footer-widgets" as="widgets" label="Footer Widgets" htmlTag="div" before="copyright" htmlClass="footer widgets">
                     <container name="widget1" htmlTag="div" htmlClass="widget">
-                        <block class="Magento\Cms\Block\Widget\Block" name="contact-widget" template="Magento_Cms::widget/static_block/default.phtml">
+                        <block class="Magento\Cms\Block\Widget\Block" name="contact-widget" template="Magento_Cms::html/widget/customWidget.phtml">
                             <arguments>
                                 <argument name="block_id" xsi:type="string">2</argument>
                             </arguments>
@@ -39,7 +39,7 @@
                     </container>
 
                     <container name="widget2" htmlTag="div" htmlClass="widget">
-                        <block class="Magento\Cms\Block\Widget\Block" name="demoBlock1" template="Magento_Cms::widget/static_block/default.phtml">
+                        <block class="Magento\Cms\Block\Widget\Block" name="demoBlock1" template="Magento_Cms::html/widget/customWidget.phtml">
                             <arguments>
                                 <argument name="block_id" xsi:type="string">2</argument>
                             </arguments>
@@ -47,7 +47,7 @@
                     </container>
 
                     <container name="widget3" htmlTag="div" htmlClass="widget">
-                        <block class="Magento\Cms\Block\Widget\Block" name="demoBlock2" template="Magento_Cms::widget/static_block/default.phtml">
+                        <block class="Magento\Cms\Block\Widget\Block" name="demoBlock2" template="Magento_Cms::html/widget/customWidget.phtml">
                             <arguments>
                                 <argument name="block_id" xsi:type="string">2</argument>
                             </arguments>
