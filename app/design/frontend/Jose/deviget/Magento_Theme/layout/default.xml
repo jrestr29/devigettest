@@ -9,10 +9,10 @@
     <body>
         <referenceBlock name="logo">
             <arguments>
-                <argument name="logo_file" xsi:type="string">images/my_logo.png</argument>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
                 <argument name="logo_alt" xsi:type="string">Custom Deviget</argument>
-                <argument name="logo_img_width" xsi:type="number">300</argument>
-                <argument name="logo_img_height" xsi:type="number">300</argument>
+                <argument name="logo_img_width" xsi:type="number">97</argument>
+                <argument name="logo_img_height" xsi:type="number">29</argument>
             </arguments>
         </referenceBlock>
 
@@ -23,6 +23,19 @@
         <referenceBlock name="report.bugs" remove="true" />
         <referenceBlock name="form.subscribe" remove="true" />
 
+        <!-- Main container structure and content modifications -->
+        <referenceContainer name="columns.top" remove="true" />
+        <referenceBlock name="breadcrumbs" remove="true"/>
+
+        <referenceContainer name="main.content">
+            <referenceContainer name="main">
+                <container name="cms-entries-landing-page" htmlTag="section" htmlId="cms-entries" htmlClass="cms-entries">
+                    <block class="Jose\Deviget\Block\Cms\Entries" />
+                </container>
+            </referenceContainer>
+        </referenceContainer>
+
+        <!-- Sidebar modifications -->
         <referenceContainer name="sidebar.additional">
             <referenceBlock name="wishlist_sidebar" remove="true" />
             <container name="sidebar-widgets" htmlTag="div" htmlClass="sidebar_widgets">
