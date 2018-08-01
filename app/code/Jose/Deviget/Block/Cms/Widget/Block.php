@@ -2,7 +2,9 @@
 
 namespace Jose\Deviget\Block\Cms\Widget;
 
-class Block extends \Magento\Cms\Block\Widget\Block
+use Magento\Cms\Block\Widget\Block as WidgetBlock;
+
+class Block extends WidgetBlock
 {
     public function getTitle()
     {
