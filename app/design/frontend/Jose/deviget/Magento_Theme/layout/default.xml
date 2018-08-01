@@ -22,14 +22,21 @@
         <referenceBlock name="top.links" remove="true" />
         <referenceBlock name="report.bugs" remove="true" />
         <referenceBlock name="form.subscribe" remove="true" />
+        <referenceBlock name="advanced-search-link" remove="true" />
 
         <!-- Main container structure and content modifications -->
         <referenceContainer name="columns.top" remove="true" />
         <referenceBlock name="breadcrumbs" remove="true"/>
 
+        <move element="navigation.sections" destination="header-wrapper"  after="logo" />
+
         <referenceContainer name="main.content">
             <referenceContainer name="main">
-                <container name="cms-entries-landing-page" htmlTag="section" htmlId="cms-entries" htmlClass="cms-entries">
+                <container name="cms-entries-landing-page-1" htmlTag="section" htmlId="cms-entries" htmlClass="cms-entries">
+                    <block class="Jose\Deviget\Block\Cms\Entries" />
+                </container>
+
+                <container name="cms-entries-landing-page-2" htmlTag="section" htmlId="cms-entries" htmlClass="cms-entries">
                     <block class="Jose\Deviget\Block\Cms\Entries" />
                 </container>
             </referenceContainer>

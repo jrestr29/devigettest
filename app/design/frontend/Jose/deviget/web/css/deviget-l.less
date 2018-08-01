@@ -4,11 +4,142 @@
 @baseDir: "../"; // Base directory path
 
 header {
+  .header {
+    &.content {
+      padding: 17px 20px 0;
 
+      .logo {
+        margin: 5px auto 25px 0;
+      }
+
+      .block-search {
+        .block-content {
+          .search {
+            label {
+              overflow: inherit;
+              margin-left: auto;
+              margin-right: 3.5rem;
+              left: 0;
+              right: 0;
+              clip: auto;
+
+              &::before {
+                cursor: pointer;
+                margin-top: 2px;
+              }
+
+              &.active {
+                display:none;
+              }
+            }
+
+            .control{
+              display: none;
+
+              input {
+                &#search {
+                  height: 35px;
+                }
+              }
+
+              &.visible {
+                display: block;
+              }
+            }
+          }
+
+          .actions {
+            display: none;
+
+            &.visible {
+              display: block;
+
+              button {
+                right: 0;
+
+                &::before {
+                  font-size: 35px;
+
+                }
+              }
+              //height: 35px
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sections {
+    &.nav-sections {
+      display: inline-block;
+      background-color: @header-bg-color;
+      margin-bottom: 0;
+      margin-left: 10rem;
+      margin-top: -1rem;
+
+      nav {
+        &.navigation {
+          background-color: @header-bg-color;
+
+          ul {
+            li {
+              a {
+                line-height: 20px;
+                color: @header-font-color;
+
+                &.level-top {
+                  line-height: 60px;
+                }
+              }
+
+              ul {
+                background-color: @header-bg-color;
+                border: 1px solid @header-bg-color;
+
+                li {
+                  a {
+                    &:hover {
+                      background-color: @header-bg-color;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 body {
+  main {
+    padding-top: 5rem;
+    .columns {
+      width: 1280px;
 
+      .main {
+        width: 74% !important;
+      }
+
+      .sidebar {
+        width: 26% !important;
+        padding-left: 0;
+      }
+
+    }
+  }
+
+  #cms-entries {
+    .entry {
+      .content {
+        .image {
+          height: calc(30vw*0.5);
+        }
+      }
+    }
+  }
 }
 
 footer {
