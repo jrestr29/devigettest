@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                <argument name="logo_alt" xsi:type="string">Custom Deviget</argument>
+                <argument name="logo_img_width" xsi:type="number">97</argument>
+                <argument name="logo_img_height" xsi:type="number">29</argument>
+            </arguments>
+        </referenceBlock>
+
+        <!-- cleaning unneeded blocks -->
+        <referenceBlock name="minicart" remove="true" />
+        <referenceBlock name="header.panel.wrapper" remove="true" />
+        <referenceBlock name="top.links" remove="true" />
+        <referenceBlock name="report.bugs" remove="true" />
+        <referenceBlock name="form.subscribe" remove="true" />
+        <referenceBlock name="advanced-search-link" remove="true" />
+
+        <!-- Main container structure and content modifications -->
+        <referenceContainer name="columns.top" remove="true" />
+        <referenceBlock name="breadcrumbs" remove="true"/>
+
+        <move element="navigation.sections" destination="header-wrapper"  after="logo" />
+
+        <referenceContainer name="main.content">
+            <referenceContainer name="main">
+                <container name="cms-entries-landing-page-1" htmlTag="section" htmlId="cms-entries" htmlClass="cms-entries">
+                    <block class="Jose\Deviget\Block\Cms\Entries" />
+                </container>
+
+                <container name="cms-entries-landing-page-2" htmlTag="section" htmlId="cms-entries" htmlClass="cms-entries">
+                    <block class="Jose\Deviget\Block\Cms\Entries" />
+                </container>
+            </referenceContainer>
+        </referenceContainer>
+
+        <!-- Sidebar modifications -->
+        <referenceContainer name="sidebar.additional">
+            <referenceBlock name="wishlist_sidebar" remove="true" />
+            <referenceBlock name="catalog.compare.sidebar" remove="true" />
+
+            <container name="sidebar-widgets" htmlTag="div" htmlClass="sidebar_widgets">
+                <block class="Jose\Deviget\Block\Widget\Social\Block" />
+                <block class="Jose\Deviget\Block\Widget\Social\PersonalInfo">
+                    <arguments>
+                        <argument name="author_name" xsi:type="string">Syed Balkhi</argument>
+                        <argument name="author_text" xsi:type="string">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel luctus risus. Duis quis felis lacus. Phasellus interdum eu augue sed iaculis. In vehicula vitae diam vel lobortis. Nullam semper mauris sit amet sapien rhoncus pretium id sit amet sapien.</argument>
+                        </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="footer-container">
+            <referenceBlock name="footer_links" remove="true" />
+            <referenceBlock name="store_switcher" remove="true" />
+
+            <referenceContainer name="footer">
+                <!-- Creating footer widgets -->
+                <container name="footer-widgets" as="widgets" label="Footer Widgets" htmlTag="div" before="copyright" htmlClass="footer widgets">
+                    <container name="footer-widgets-content" htmlTag="div" htmlClass="content">
+                        <container name="widget1" htmlTag="div" htmlClass="widget">
+                            <block class="Magento\Cms\Block\Widget\Block" name="contact-widget" template="Magento_Cms::html/widget/customWidget.phtml">
+                                <arguments>
+                                    <argument name="block_id" xsi:type="string">2</argument>
+                                </arguments>
+                            </block>
+                        </container>
+
+                        <container name="widget2" htmlTag="div" htmlClass="widget">
+                            <block class="Magento\Cms\Block\Widget\Block" name="demoBlock1" template="Magento_Cms::html/widget/customWidget.phtml">
+                                <arguments>
+                                    <argument name="block_id" xsi:type="string">2</argument>
+                                </arguments>
+                            </block>
+                        </container>
+
+                        <container name="widget3" htmlTag="div" htmlClass="widget">
+                            <block class="Magento\Cms\Block\Widget\Block" name="demoBlock2" template="Magento_Cms::html/widget/customWidget.phtml">
+                                <arguments>
+                                    <argument name="block_id" xsi:type="string">2</argument>
+                                </arguments>
+                            </block>
+                        </container>
+                    </container>
+                </container>
+
+                <container name="footer-copyright" as="copyright" label="Footer Copyright" htmlTag="div" htmlClass="footer copyright">
+                    <container name="footer-copyright-content" htmlTag="div" htmlClass="content">
+                        <block class="Magento\Theme\Block\Html\Footer" name="copyright" template="Magento_Theme::html/copyright.phtml"/>
+                    </container>
+                </container>
+            </referenceContainer>
+        </referenceContainer>
+    </body>
+</page>
